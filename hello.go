@@ -2,13 +2,13 @@ package main
 
 import (
   "fmt"
-  "reflect"
-)
-var (
-  firstName, lastName string
-  age int
 )
 
 func main(){
-  fmt.Print("Start from ", reflect.TypeOf(age))
+  firstName := "Jonathan"
+  lastName := "Hernandez"
+  age := 23
+
+  fmt.Println("My name is: ", firstName, " ", lastName)
+  fmt.Print("I am: ", age, " years old")
 }
