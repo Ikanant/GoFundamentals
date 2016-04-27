@@ -1,5 +1,14 @@
 package main
 
+import (
+  "fmt"
+  "reflect"
+)
+var (
+  firstName, lastName string
+  age int
+)
+
 func main(){
-  print("Start code")
+  fmt.Print("Start from ", reflect.TypeOf(age))
 }
