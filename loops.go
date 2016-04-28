@@ -21,4 +21,14 @@ func main(){
   for i:=0; i<5; i++ {
     fmt.Println("Regular looping", i+1)
   }
+
+  listOfNames := []string {"John", "Pepe", "Cuco", "Angulo", "Manolo"}
+
+  for index, value := range(listOfNames) {
+    fmt.Println(index, " value is: ", value)
+
+    if value == "Angulo"{
+      break
+    }
+  }
 }
