@@ -2,11 +2,18 @@ package main
 
 import (
   "fmt"
-  "os"
 )
 
 func main(){
-  loggedName := os.Getenv("USERNAME")
+  fmt.Println( average(1,2,3,4,5) )
 
-  fmt.Println(loggedName)
+}
+
+func average(countList ...int) int {
+  sum := 0
+  for _, val := range countList {
+    sum += val
+  }
+
+  return sum
 }
