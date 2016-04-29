@@ -19,5 +19,9 @@ func main() {
 		myNewSlice = append(myNewSlice, i)
 		fmt.Println("The capacity of my new Slice is: ", cap(myNewSlice))
 	}
+	fmt.Println("\n", sliceOfSlice)
+
+	sliceOfSlice = append(sliceOfSlice, mySlice...)
 	fmt.Println(sliceOfSlice)
+
 }
