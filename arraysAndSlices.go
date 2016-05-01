@@ -1,14 +1,27 @@
 package main
 
-import(
-  "fmt"
+import (
+	"fmt"
 )
 
-func main(){
-  //make will need (<type>, <len>, <cap>)
+func main() {
+	//make will need (<type>, <len>, <cap>)
 
-  mySlice := make([]string, 5, 10)
-  fmt.Println("My slice length is: ", len(mySlice))
-  fmt.Println("My slice capacity is: ", cap(mySlice))
+	mySlice := []int{1, 2, 3, 4, 5}
+	sliceOfSlice := mySlice[0:3]
+
+	fmt.Println(mySlice)
+	fmt.Println(sliceOfSlice)
+
+	myNewSlice := make([]int, 2, 4)
+
+	for i := 0; i < 20; i++ {
+		myNewSlice = append(myNewSlice, i)
+		fmt.Println("The capacity of my new Slice is: ", cap(myNewSlice))
+	}
+	fmt.Println("\n", sliceOfSlice)
+
+	sliceOfSlice = append(sliceOfSlice, mySlice...)
+	fmt.Println(sliceOfSlice)
 
 }
